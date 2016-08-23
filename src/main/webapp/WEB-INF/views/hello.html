@@ -1,0 +1,12 @@
+<div th:fragment="content">
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" action="/" method="post" th:object="${login}">
+                <input type="text" placeholder="username" name="username" required="required"/>
+                <input type="password" placeholder="password" name="password" required="required"/>
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <input type="submit" class="button" name="login" value="login"/>
+            </form>
+        </div>
+    </div>
+</div>

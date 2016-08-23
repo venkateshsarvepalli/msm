@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Thank you</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div class="mail-wrapper" style="border-radius:3px;max-width: 600px;min-width: 535px;margin:0 auto;text-align:justify;font-size: 12px;line-height: 20px;color: #000;font-weight: normal;font-family: Trebuchet MS,Roboto,Arial,sans-serif;border:1px solid #e0e0e0;">
+    <div style="width:100%;background-color: #4AC3F7;">
+        <img src="https://s3-ap-southeast-1.amazonaws.com/fb-site-images/christmas/top.png" style="width: 100%;" />
+    </div>
+    <div class="mail-body" style="padding: 0;float: left;width: 100%;background-color: #4AC3F7;">
+        <div style="width: 60%;float: left;">
+            <div style="padding: 18px;font-size: 15px;font-weight: bold;color: #4A4A4A;text-align: center;">
+                Give your referral code to your friends and ask them to sign up
+            </div>
+        </div>
+        <div style="width: 40%;float: left;">
+            <div style="font-size: 17px;font-weight: bold;color: #292929;border: 1px dotted gray;border-radius: 50px;padding: 9px;max-width: 150px;text-align: center;margin: 18px;">
+                <span th:text="${referralCode}"/>
+            </div>
+        </div>
+    </div>
+    <div class="mail-footer" style="text-align:center;font-size: 11px;line-height: 5px;color: #666666;padding:0px;">
+        <div style="width:100%;">
+            <img src="https://s3-ap-southeast-1.amazonaws.com/fb-site-images/christmas/bottom.png" style="width: 100%;" />
+        </div>
+    </div>
+</div>
+</body>
+</html>

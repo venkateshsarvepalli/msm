@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body style="margin:0;padding:0">
+    <div th:replace="layouts/default/header :: header">
+        Header
+    </div>
+    <div th:replace="${view} :: content">
+        Content
+    </div>
+    <div th:replace="layouts/default/footer :: footer">
+    </div>
+</body>
+</html>

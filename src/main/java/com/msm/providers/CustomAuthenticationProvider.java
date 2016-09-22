@@ -1,6 +1,6 @@
 package com.msm.providers;
 
-import com.msm.model.User;
+import com.msm.model.UserAccount;
 import com.msm.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -30,9 +30,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         String name = authentication.getName().toLowerCase();
         String password = authentication.getCredentials().toString();
 
-        User user = userRepository.authenticate(name, password);
-        if (user != null) {
-            return new UsernamePasswordAuthenticationToken(user, password, user.getAuthorities());
+        UserAccount userAccount = userRepository.authenticate(name, password);
+        if (userAccount != null) {
+            return new UsernamePasswordAuthenticationToken(userAccount, password, userAccount.getAuthorities());
         }
 
         return null;

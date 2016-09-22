@@ -1,6 +1,6 @@
 package com.msm.providers;
 
-import com.msm.model.User;
+import com.msm.model.UserAccount;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -12,36 +12,36 @@ import java.util.Collection;
  */
 public class UserAuthentication implements Authentication {
 
-    private final User user;
+    private final UserAccount userAccount;
     private boolean authenticated = true;
 
-    public UserAuthentication(User user) {
-        this.user = user;
+    public UserAuthentication(UserAccount userAccount) {
+        this.userAccount = userAccount;
     }
 
     @Override
     public String getName() {
-        return user.getName();
+        return userAccount.getName();
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return user.getAuthorities();
+        return userAccount.getAuthorities();
     }
 
     @Override
     public Object getCredentials() {
-        return user.getPassword();
+        return userAccount.getPassword();
     }
 
     @Override
-    public User getDetails() {
-        return user;
+    public UserAccount getDetails() {
+        return userAccount;
     }
 
     @Override
     public Object getPrincipal() {
-        return user.getUsername();
+        return userAccount.getUsername();
     }
 
     @Override

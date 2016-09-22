@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Venkatesh on 28-11-2014.
  */
 @Entity
-public class User implements Serializable, UserDetails {
+public class UserAccount implements Serializable, UserDetails {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -31,7 +31,7 @@ public class User implements Serializable, UserDetails {
 
     private String country;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="users")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy="userAccounts")
     private List<Role> roles;
 
     @Override

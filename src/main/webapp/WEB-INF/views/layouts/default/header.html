@@ -1,5 +1,20 @@
 <div th:fragment="header">
-    <div class="header">
+    <span th:text="${#authentication}"/>
+    <div class="header" sec:authorize="isAuthenticated()">
+        <aside id="sidebar" class="column-left">
+            <header>
+                <h1><a href="#">MSM</a></h1>
+                <h2>Welcome to my website!</h2>
+            </header>
 
+            <nav id="mainnav">
+                <ul>
+                    <li class="selected-item"><a href="/hello">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Vendor</a></li>
+                    <li><a href="#">Invoice</a></li>
+                </ul>
+            </nav>
+        </aside>
     </div>
 </div>

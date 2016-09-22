@@ -1,6 +1,6 @@
 package com.msm.service;
 
-import com.msm.model.User;
+import com.msm.model.UserAccount;
 
 /**
  *
@@ -8,5 +8,5 @@ import com.msm.model.User;
  */
 public interface UserService  {
 
-    User findUserByToken(String token);
+    UserAccount findUserByToken(String token);
 }

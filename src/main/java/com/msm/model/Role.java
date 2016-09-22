@@ -29,7 +29,7 @@ public class Role implements GrantedAuthority,Serializable {
     private String description;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    private List<User> users;
+    private List<UserAccount> userAccounts;
 
     public Role() {
 
@@ -78,11 +78,11 @@ public class Role implements GrantedAuthority,Serializable {
 
     }
 
-    public List<User> getUsers() {
-        return users;
+    public List<UserAccount> getUserAccounts() {
+        return userAccounts;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setUserAccounts(List<UserAccount> userAccounts) {
+        this.userAccounts = userAccounts;
     }
 }

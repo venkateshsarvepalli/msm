@@ -2,7 +2,7 @@ package com.msm.controller;
 
 import com.msm.helpers.Layout;
 import com.msm.helpers.UserHelper;
-import com.msm.model.User;
+import com.msm.model.UserAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +18,8 @@ public class UserController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(Model model, HttpServletRequest request) {
-        User user = UserHelper.getCurrentUser();
-        model.addAttribute("user",user);
+        UserAccount userAccount = UserHelper.getCurrentUser();
+        model.addAttribute("userAccount", userAccount);
         return "home";
     }
 

@@ -1,6 +1,6 @@
 package com.msm.service;
 
-import com.msm.model.User;
+import com.msm.model.UserAccount;
 import com.msm.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findUserByToken(String token) {
+    public UserAccount findUserByToken(String token) {
         return null;
     }
 

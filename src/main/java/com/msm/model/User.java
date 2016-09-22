@@ -31,7 +31,7 @@ public class User implements Serializable, UserDetails {
 
     private String country;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="users")
     private List<Role> roles;
 
     @Override

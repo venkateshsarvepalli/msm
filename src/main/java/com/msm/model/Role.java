@@ -28,7 +28,7 @@ public class Role implements GrantedAuthority,Serializable {
 
     private String description;
 
-    @ManyToMany(mappedBy="roles")
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<User> users;
 
     public Role() {
